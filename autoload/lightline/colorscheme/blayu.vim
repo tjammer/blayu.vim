@@ -5,10 +5,10 @@
 
 let s:text      = [ '#e6e0cf', 253 ]
 let s:bg        = [ '#0e2133', 222 ]
-let s:fg        = [ '#dfb46a', 234 ]
-let s:insert    = [ '#73b8bf', 222 ]
+let s:fg        = [ '#7390bf', 234 ]
+let s:insert    = [ '#dfb46a', 222 ]
 let s:replace   = [ '#df6a6a', 222 ]
-let s:visual    = [ '#e6e0cf', 222 ]
+let s:visual    = [ '#73b8bf', 222 ]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
