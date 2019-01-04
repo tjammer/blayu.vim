@@ -1,7 +1,7 @@
-" File              : colors/blayu.vim
+" File              : blayu.vim
 " Author            : Tobias Jammer <tobiasjammer@gmail.com>
 " Date              : 24.08.2018
-" Last Modified Date: 24.08.2018
+" Last Modified Date: 04.01.2019
 
 " Initialisation:"{{{
 " ----------------------------------------------------------------------------
