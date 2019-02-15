@@ -18,27 +18,27 @@ let g:colors_name = "blayu"
 
 let s:palette = {}
 
-let s:palette.bg        = "#0e2133" " done
+let s:palette.bg        = "#0e2133"
 
-let s:palette.comment   = "#5c7b99" " done
-let s:palette.markup    = "#dfb46a" " done
-let s:palette.constant  = "#73b8bf" " done
-let s:palette.operator  = "#dfb46a" " done
-let s:palette.tag       = "#7390bf" " done
-let s:palette.regexp    = "#df6a6a" " done
-let s:palette.string    = "#73b8bf" " done
-let s:palette.function  = "#dfb46a" " done
-let s:palette.special   = "#df6a6a" " done
-let s:palette.keyword   = "#dfb46a" " done
+let s:palette.comment   = "#5c7b99"
+let s:palette.markup    = "#dfb46a"
+let s:palette.constant  = "#73b8bf"
+let s:palette.operator  = "#dfb46a"
+let s:palette.tag       = "#7390bf"
+let s:palette.regexp    = "#df6a6a"
+let s:palette.string    = "#73b8bf"
+let s:palette.function  = "#dfb46a"
+let s:palette.special   = "#df6a6a"
+let s:palette.keyword   = "#dfb46a"
 
-let s:palette.error     = "#df6a6a" " done
-let s:palette.accent    = "#dfb46a" " done
-let s:palette.panel     = "#dfb46a" " changed
-let s:palette.guide     = "#5c7b99" " done
-let s:palette.line      = "#0e2133" " done
-let s:palette.selection = "#dfb46a" " done
-let s:palette.fg        = "#e6e0cf" " done
-let s:palette.fg_idle   = "#7390bf" " done
+let s:palette.error     = "#df6a6a"
+let s:palette.accent    = "#dfb46a"
+let s:palette.panel     = "#dfb46a"
+let s:palette.guide     = "#5c7b99"
+let s:palette.line      = "#0e2133"
+let s:palette.selection = "#1e364c"
+let s:palette.fg        = "#e6e0cf"
+let s:palette.fg_idle   = "#7390bf"
 
 "}}}
 
@@ -91,15 +91,15 @@ exe "hi! Normal"        .s:fg_fg          .s:bg_bg          .s:fmt_none
 exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 " Conceal, Cursor, CursorIM
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLine"    .s:fg_selection   .s:bg_bg          .s:fmt_none
+exe "hi! CursorLine"    .s:fg_accent      .s:bg_bg          .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_line        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
-exe "hi! DiffAdd"       .s:fg_bg          .s:bg_panel       .s:fmt_none
-exe "hi! DiffChange"    .s:fg_bg          .s:bg_panel       .s:fmt_none
-exe "hi! DiffText"      .s:fg_bg          .s:bg_string      .s:fmt_none
-exe "hi! DiffDelete"    .s:fg_bg          .s:bg_comment     .s:fmt_none
+exe "hi! DiffAdd"       .s:fg_accent      .s:bg_comment     .s:fmt_none
+exe "hi! DiffChange"    .s:fg_bg          .s:bg_comment     .s:fmt_none
+exe "hi! DiffText"      .s:fg_accent      .s:bg_comment     .s:fmt_none
+exe "hi! DiffDelete"    .s:fg_bg          .s:bg_selection   .s:fmt_none
 exe "hi! ErrorMsg"      .s:fg_fg          .s:bg_error       .s:fmt_stnd
 exe "hi! VertSplit"     .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Folded"        .s:fg_fg_idle     .s:bg_bg          .s:fmt_none
@@ -111,13 +111,13 @@ exe "hi! MatchParen"    .s:fg_fg          .s:bg_bg          .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_comment     .s:bg_none        .s:fmt_none
-exe "hi! Pmenu"         .s:fg_bg          .s:bg_selection   .s:fmt_none
-exe "hi! PmenuSel"      .s:fg_bg          .s:bg_selection   .s:fmt_revr
+exe "hi! Pmenu"         .s:fg_bg          .s:bg_keyword     .s:fmt_none
+exe "hi! PmenuSel"      .s:fg_bg          .s:bg_keyword     .s:fmt_revr
 "   PmenuSbar"
 "   PmenuThumb"
 exe "hi! Question"      .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! Search"        .s:fg_bg          .s:bg_constant    .s:fmt_none
-exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
+exe "hi! SpecialKey"    .s:fg_keyword     .s:bg_none        .s:fmt_none
 exe "hi! SpellCap"      .s:fg_tag         .s:bg_none        .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_keyword     .s:bg_none        .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_error       .s:bg_none        .s:fmt_undr
@@ -129,7 +129,7 @@ exe "hi! TabLine"       .s:fg_fg          .s:bg_panel       .s:fmt_revr
 "   TabLineFill"
 "   TabLineSel"
 exe "hi! Title"         .s:fg_keyword     .s:bg_none        .s:fmt_none
-exe "hi! Visual"        .s:fg_bg          .s:bg_selection   .s:fmt_none
+exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "   VisualNos"
 exe "hi! WarningMsg"    .s:fg_error       .s:bg_none        .s:fmt_none
 
@@ -238,8 +238,8 @@ exe "hi! NERDTreeDirSlash"          .s:fg_guide      .s:bg_none        .s:fmt_no
 " GitGutter
 " ---------
 exe "hi! GitGutterAdd"          .s:fg_string     .s:bg_none        .s:fmt_none
-exe "hi! GitGutterChange"       .s:fg_tag        .s:bg_none        .s:fmt_none
-exe "hi! GitGutterDelete"       .s:fg_markup     .s:bg_none        .s:fmt_none
+exe "hi! GitGutterChange"       .s:fg_string     .s:bg_none        .s:fmt_none
+exe "hi! GitGutterDelete"       .s:fg_error      .s:bg_none        .s:fmt_none
 exe "hi! GitGutterChangeDelete" .s:fg_function   .s:bg_none        .s:fmt_none
 
 "}}}
