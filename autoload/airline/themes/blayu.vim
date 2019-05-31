@@ -40,7 +40,7 @@ let s:cterm0D = 4
 let s:cterm0E = 5
 let s:cterm0F = 17
 
-let s:N1   = [ s:gui06, s:gui00, s:cterm01, s:cterm0B ]
+let s:N1   = [ s:gui00, s:gui03, s:cterm01, s:cterm0B ]
 let s:N2   = [ s:gui06, s:gui02, s:cterm06, s:cterm02 ]
 let s:N3   = [ s:gui06, s:gui00, s:cterm09, s:cterm01 ]
 let g:airline#themes#blayu#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
