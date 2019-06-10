@@ -123,7 +123,7 @@ exe "hi! SpellLocal"    .s:fg_keyword     .s:bg_none        .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_error       .s:bg_none        .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_regexp      .s:bg_none        .s:fmt_undr
 exe "hi! StatusLine"    .s:fg_fg          .s:fg_function    .s:fmt_none
-exe "hi! StatusLineNC"  .s:fg_fg_idle     .s:bg_panel       .s:fmt_none
+exe "hi! StatusLineNC"  .s:fg_fg_idle     .s:bg_bg          .s:fmt_none
 exe "hi! WildMenu"      .s:fg_bg          .s:bg_markup      .s:fmt_none
 exe "hi! TabLine"       .s:fg_fg          .s:bg_panel       .s:fmt_revr
 "   TabLineFill"
